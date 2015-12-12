@@ -1,0 +1,40 @@
+{
+  "name": "waterlock-vkontakte-auth",
+  "version": "0.0.1",
+  "description": "Waterlock-vkontakte-auth is a module for waterlock providing a Vkontakt authentication method for users either based on username.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "lodash": "2.4.1",
+    "request": "*"
+  },
+  "devDependencies": {    
+    "mocha": "*",
+    "should": "*",
+    "proxyquire": "*",
+    "coveralls": "*",
+    "istanbul": "*",
+    "jshint": "*"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/westtrade/waterlock-vkontakte-auth.git"
+  },
+  "keywords": [
+    "vkontakte",
+    "authentication",
+    "waterlock",
+    "sails"
+  ],
+  "author": "Popov Gena <commerce@westtrade.tk> (http://westtrade.tk/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/westtrade/waterlock-vkontakte-auth/issues"
+  },
+  "homepage": "https://github.com/westtrade/waterlock-vkontakte-auth#readme"
+}
