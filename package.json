@@ -7,10 +7,10 @@
     "test": "test"
   },
   "dependencies": {
-    "lodash": "2.4.1",
-    "request": "*"
+    "lodash": "^3.10.1",
+    "request": "^2.67.0"
   },
-  "devDependencies": {    
+  "devDependencies": {
     "mocha": "*",
     "should": "*",
     "proxyquire": "*",
