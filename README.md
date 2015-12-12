@@ -17,12 +17,12 @@ Set the following option in your `waterlock.js` config file
 
 ```js
 authMethod: [
-	{
-		name: "waterlock-vkontakte-auth",
-		appId: "your-app-id",
-		appSecret: "your-app-secret",
-		redirectUri: 'redirectUri'
-	}
+    {
+        name: "waterlock-vkontakte-auth",
+        appId: "your-app-id",
+        appSecret: "your-app-secret",
+        redirectUri: 'redirectUri'
+    }
 ]
 ```
 
@@ -47,12 +47,12 @@ To grab and store this, you will need to modify the add the fields in your `Auth
 ```js
 // api/models/Auth.js
 module.exports = {
-	attributes: require('waterlock').models.auth.attributes({
-		firstName: 'string',
-		lastName: 'string',
-		gender: 'string',
-		timezone: 'number'
-	})
+    attributes: require('waterlock').models.auth.attributes({
+        firstName: 'string',
+        lastName: 'string',
+        gender: 'string',
+        timezone: 'number'
+    })
 }
 ```
 
@@ -60,17 +60,17 @@ module.exports = {
 
 ```js
 authMethod: [
-	{
-		name: "waterlock-vkontakte-auth",
-		appId: "your-app-id",
-		appSecret: "your-app-secret",
-		fieldMap: {
-			// <model-field>: <vkontakte-field>,
-			'firstName': 'first_name',
-			'lastName': 'last_name',
-			'gender': 'gender',
-			'timezone': 'timezone'
-		}
-	}
+    {
+        name: "waterlock-vkontakte-auth",
+        appId: "your-app-id",
+        appSecret: "your-app-secret",
+        fieldMap: {
+            // <model-field>: <vkontakte-field>,
+            'firstName': 'first_name',
+            'lastName': 'last_name',
+            'gender': 'gender',
+            'timezone': 'timezone'
+        }
+    }
 ]
 ```
