@@ -6,8 +6,8 @@ describe('model', function(){
     model.should.be.Object;
     done();
   }); 
-  it('should have a facebookId', function(done){
-    model.should.have.property('facebookId');
+  it('should have a vkontakteId', function(done){
+    model.should.have.property('vkontakteId');
     done();
   });
   it('should have a name', function(done){

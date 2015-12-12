@@ -7,9 +7,9 @@ var pathStub = {
   }
 };
 
-var wl = proxyquire.noCallThru().load('../lib/waterlock-facebook-auth', { 'path': pathStub});
+var wl = proxyquire.noCallThru().load('../lib/waterlock-vkontakte-auth', { 'path': pathStub});
 
-describe('waterlock-facebook-auth', function(){
+describe('waterlock-vkontakte-auth', function(){
   it('should export actions', function(done){
     wl.should.have.property('actions');
 
@@ -19,8 +19,8 @@ describe('waterlock-facebook-auth', function(){
     wl.should.have.property('model');
     done();
   });
-  it('should export a fb instance', function(done){
-    wl.should.have.property('fb');
+  it('should export a vk instance', function(done){
+    wl.should.have.property('vk');
     done();
   });
 })
