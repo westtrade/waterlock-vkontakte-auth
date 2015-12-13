@@ -8,12 +8,15 @@ providing a vkontakte authentication method for users either based on username.
 ## Usage
 
 ```bash
-npm install waterlock-vkontakte-auth
+
+npm i waterlock-vkontakte-auth --save
+
 ```
 
 Set the following option in your `waterlock.js` config file
 
- - redirectUri is an optional property - use this if you want to override the computed redirectUri. This is useful for when you want to send an auth code to waterlock instead of having waterlock handle the entire auth flow for you. Useful for when you're developing an SPA which handles the authentication with something like Torii (EmberJs). See https://github.com/wayne-o/ember-waterlock-example - waterlock will validate the auth code with the provider and retrieve an access token which can be used to setup a session and return the JWT to your app
+- redirectUri is an optional property - use this if you want to override the computed redirectUri. This is useful for when you want to send an auth code to waterlock instead of having waterlock handle the entire auth flow for you. Useful for when you're developing an SPA which handles the authentication with something like Torii (EmberJs). See https://github.com/wayne-o/ember-waterlock-example - waterlock will validate the auth code with the provider and retrieve an access token which can be used to setup a session and return the JWT to your app
+
 
 ```js
 authMethod: [
@@ -40,9 +43,11 @@ module.exports.waterlock = {
 
 ### Grabbing Vkontakte field values
 
-By default, waterlock-vkontakte-auth stores the user's `vkontakteId`, `name` and `email` in the Auth model. In reality, Vkontakte returns more data than that.
-
+By default, waterlock-vkontakte-auth stores the user's `vkontakteId` and `email` in the Auth model. In reality, Vkontakte returns more data than that.
 To grab and store this, you will need to modify the add the fields in your `Auth.js` model...
+
+Full list of [vk auth fields](https://vk.com/dev/fields).
+
 
 ```js
 // api/models/Auth.js
@@ -56,7 +61,13 @@ module.exports = {
 }
 ```
 
-...and then add a `fieldMap` object within the vkontakte authMethod in your `waterlock.js` config file which matches your model's fields to vkontakte's fields.
+`` List of authMethod settings ``
+
+- `fieldMap` object within the vkontakte authMethod in your `waterlock.js` config file which matches your model's fields to vkontakte's fields.
+- `settings` object override default OAuth2.0 vk settings, except scope (this array required two permission as default `friends` and `email`), and this next options: 'v', 'client_id', 'response_type', 'redirect_uri'. Full list of overrided options of `dialog` settings you can see [here](https://vk.com/dev/auth_sites). List of scope permission you can see [here](https://vk.com/dev/permissions)
+
+
+
 
 ```js
 authMethod: [
@@ -64,13 +75,23 @@ authMethod: [
         name: "waterlock-vkontakte-auth",
         appId: "your-app-id",
         appSecret: "your-app-secret",
-        fieldMap: {
+
+        fieldMap: { 
             // <model-field>: <vkontakte-field>,
             'firstName': 'first_name',
             'lastName': 'last_name',
             'gender': 'gender',
             'timezone': 'timezone'
-        }
+        },
+
+        settings : { //override default oauth settings
+
+            dialog : { //https://vk.com/dev/auth_sites
+                'scope' : ['offers']
+            },
+
+            version : '5.42'
+        },
     }
 ]
 ```
