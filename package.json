@@ -11,12 +11,12 @@
     "request": "^2.67.0"
   },
   "devDependencies": {
-    "mocha": "*",
-    "should": "*",
-    "proxyquire": "*",
-    "coveralls": "*",
+    "coveralls": "^2.11.6",
     "istanbul": "*",
-    "jshint": "*"
+    "jshint": "*",
+    "mocha": "*",
+    "proxyquire": "*",
+    "should": "*"
   },
   "scripts": {
     "test": "make test"
