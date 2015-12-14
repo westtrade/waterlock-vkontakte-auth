@@ -1,6 +1,6 @@
 # Waterlock Vkontakte Auth
 
-[![Codacy Badge](https://api.codacy.com/project/badge/grade/4f36bfc9e30043949ca39f1c1b71383c)](https://www.codacy.com/app/me_50/waterlock-vkontakte-auth)
+[![Codacy](https://img.shields.io/codacy/e27821fb6289410b8f58338c7e0bc686.svg)](https://www.codacy.com/app/westtrade/waterlock-vkontakte-auth)
 [![Build Status](https://img.shields.io/travis/westtrade/waterlock-vkontakte-auth.svg?style=flat)](https://travis-ci.org/westtrade/waterlock-vkontakte-auth) 
 [![NPM version](https://img.shields.io/npm/v/waterlock-vkontakte-auth.svg?style=flat)](http://badge.fury.io/js/waterlock-vkontakte-auth) 
 [![Dependency Status](https://gemnasium.com/westtrade/waterlock-vkontakte-auth.svg?style=flat)](https://gemnasium.com/westtrade/waterlock-vkontakte-auth)
