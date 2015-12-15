@@ -31,5 +31,8 @@ node_modules
 *.sublime-project
 *.sublime-workspace
 
+.directory
+
+
 # testfiles
 _testapp/
