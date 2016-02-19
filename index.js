@@ -1,6 +1,6 @@
 /**
- * waterlock-facebook-auth
- * Copyright(c) 2014 David Rivera <david.r.rivera193@gmail.com>
+ * waterlock-vkontakte-auth
+ * Copyright(c) 2014 Popov Gena <commerce@westtrade.tk>
  * MIT Licensed
  */
 module.exports = require('./lib/waterlock-vkontakte-auth'); 
