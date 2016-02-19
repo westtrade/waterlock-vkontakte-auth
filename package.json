@@ -1,6 +1,6 @@
 {
   "name": "waterlock-vkontakte-auth",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Waterlock-vkontakte-auth is a module for waterlock providing a Vkontakt authentication method for users either based on username.",
   "main": "index.js",
   "directories": {
